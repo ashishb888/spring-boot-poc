@@ -1,0 +1,8 @@
+spring:
+ application:
+  name: apps-status
+
+logging:
+  level:
+    root: info
+  file: /var/log/apps/apps-status/apps-status
