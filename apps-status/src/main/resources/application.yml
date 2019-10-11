@@ -9,3 +9,11 @@ logging:
   level:
     root: info
   file: /var/tmp/log/apps/apps-status/apps-status
+  
+app:
+  commands:
+    - /opt/ngs/ashishb/bash/apps-status/apps-status.sh
+    #- cd
+    #- /opt/ngs/ashishb/bash/apps-status
+    #- bash
+    #- apps-status-remote1.sh

@@ -1,0 +1,47 @@
+AppsStatusService callBash RUN 1
+
+http://172.17.5.36:7272/apps-status/apps-status
+
+2019-10-11 19:48:04.121  INFO 112694 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : callBash service
+2019-10-11 19:48:04.122  INFO 112694 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : commands: [/opt/ngs/ashishb/bash/apps-status/apps-status.sh]
+2019-10-11 19:48:04.157  INFO 112694 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : status: 0
+2019-10-11 19:48:04.158  INFO 112694 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : lines: [t1,stopped, t2,stopped, t3,stopped, t4,stopped, t5,stopped]
+2019-10-11 19:48:04.160  INFO 112694 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : map: {t4=stopped, t5=stopped, t1=stopped, t2=stopped, t3=stopped}
+
+{
+    "status": "success",
+    "data": {
+        "t4": "stopped",
+        "t5": "stopped",
+        "t1": "stopped",
+        "t2": "stopped",
+        "t3": "stopped"
+    }
+}
+
+----------=----------
+
+AppsStatusService callBash RUN 2
+
+Description:
+	Added a PID of a running process in t1.lck file
+
+http://172.17.5.36:7272/apps-status/apps-status
+
+2019-10-11 19:49:41.163  INFO 112694 --- [nio-7272-exec-3] p.springboot.service.AppsStatusService   : callBash service
+2019-10-11 19:49:41.164  INFO 112694 --- [nio-7272-exec-3] p.springboot.service.AppsStatusService   : commands: [/opt/ngs/ashishb/bash/apps-status/apps-status.sh]
+2019-10-11 19:49:41.201  INFO 112694 --- [nio-7272-exec-3] p.springboot.service.AppsStatusService   : status: 0
+2019-10-11 19:49:41.202  INFO 112694 --- [nio-7272-exec-3] p.springboot.service.AppsStatusService   : lines: [t1,running, t2,stopped, t3,stopped, t4,stopped, t5,stopped]
+2019-10-11 19:49:41.202  INFO 112694 --- [nio-7272-exec-3] p.springboot.service.AppsStatusService   : map: {t4=stopped, t5=stopped, t1=running, t2=stopped, t3=stopped}
+
+
+{
+    "status": "success",
+    "data": {
+        "t4": "stopped",
+        "t5": "stopped",
+        "t1": "running",
+        "t2": "stopped",
+        "t3": "stopped"
+    }
+}
