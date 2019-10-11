@@ -2,7 +2,10 @@ spring:
  application:
   name: apps-status
 
+server:  port: 7272
+  servlet:    context-path: /apps-status
+
 logging:
   level:
     root: info
-  file: /var/log/apps/apps-status/apps-status
+  file: /var/tmp/log/apps/apps-status/apps-status

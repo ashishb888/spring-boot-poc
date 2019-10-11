@@ -22,7 +22,7 @@ public class AppsStatusApp implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		log.info("run service");
 
-		ass.main();
+		// ass.main();
 	}
 
 }
