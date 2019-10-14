@@ -8,6 +8,7 @@ server:  port: 7272
 logging:
   level:
     root: info
+    poc.springboot: debug
   file: /var/tmp/log/apps/apps-status/apps-status
   
 app:
