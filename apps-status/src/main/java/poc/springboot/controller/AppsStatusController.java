@@ -15,10 +15,17 @@ public class AppsStatusController {
 	@Autowired
 	private AppsStatusService ass;
 
-	@RequestMapping(method = RequestMethod.GET, path = "/apps-status")
-	public Response appsStatus() {
-		log.debug("appsStatus service");
+	@RequestMapping(method = RequestMethod.GET, path = "/apps-status-old")
+	public Response<?> appsStatusOld() {
+		log.debug("appsStatusOld service");
 
 		return ass.callBash();
+	}
+
+	@RequestMapping(method = RequestMethod.GET, path = "/apps-status")
+	public Response<?> appsStatus() {
+		log.debug("appsStatus service");
+
+		return ass.callBashR();
 	}
 }

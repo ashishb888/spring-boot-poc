@@ -45,3 +45,59 @@ http://172.17.5.36:7272/apps-status/apps-status
         "t3": "stopped"
     }
 }
+
+
+----------=----------
+
+ /opt/ngs/ashishb/bash/apps-status/apps-status-r.sh
+hdpdev1|t1,stopped^t2,stopped^t3,stopped^t4,stopped^t5,stopped
+hdpdev6|t1,stopped^t2,stopped^t3,stopped^t4,stopped^t5,stopped
+
+2019-10-14 14:49:02.680  INFO 191888 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : commands: [/opt/ngs/ashishb/bash/apps-status/apps-status.sh]
+2019-10-14 14:49:02.718  INFO 191888 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : status: 0
+2019-10-14 14:49:02.720  INFO 191888 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : lines: [t1,stopped, t2,stopped, t3,stopped, t4,stopped, t5,stopped]
+2019-10-14 14:49:02.721  INFO 191888 --- [nio-7272-exec-1] p.springboot.service.AppsStatusService   : map: {t4=stopped, t5=stopped, t1=stopped, t2=stopped, t3=stopped}
+
+
+
+ /opt/ngs/ashishb/bash/apps-status/apps-status.sh
+t1,stopped
+t2,stopped
+t3,stopped
+t4,stopped
+t5,stopped
+
+2019-10-14 14:50:52.668  INFO 192314 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : commands: [/opt/ngs/ashishb/bash/apps-status/apps-status-r.sh]
+2019-10-14 14:50:53.064  INFO 192314 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : status: 0
+2019-10-14 14:50:53.066  INFO 192314 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : lines: [hdpdev1|t1,stopped^t2,stopped^t3,stopped^t4,stopped^t5,stopped, hdpdev6|t1,running^t2,stopped^t3,stopped^t4,stopped^t5,stopped]
+2019-10-14 14:50:53.066  INFO 192314 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : map: {hdpdev6|t1=running^t2, hdpdev1|t1=stopped^t2}
+
+
+----------=----------
+
+2019-10-14 16:06:38.740  INFO 15565 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : callBashR service
+2019-10-14 16:06:38.741  INFO 15565 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : commands: [/opt/ngs/ashishb/bash/apps-status/apps-status-r.sh]
+2019-10-14 16:06:39.149  INFO 15565 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : status: 0
+2019-10-14 16:06:39.150  INFO 15565 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : lines: [hdpdev1|t1,stopped^t2,stopped^t3,stopped^t4,stopped^t5,stopped, hdpdev6|t1,running^t2,stopped^t3,stopped^t4,stopped^t5,stopped]
+2019-10-14 16:06:39.150  INFO 15565 --- [nio-7272-exec-4] p.springboot.service.AppsStatusService   : map: {hdpdev6={t4=stopped, t5=stopped, t1=running, t2=stopped, t3=stopped}, hdpdev1={t4=stopped, t5=stopped, t1=stopped, t2=stopped, t3=stopped}}
+
+
+{
+    "status": "success",
+    "data": {
+        "hdpdev6": {
+            "t4": "stopped",
+            "t5": "stopped",
+            "t1": "running",
+            "t2": "stopped",
+            "t3": "stopped"
+        },
+        "hdpdev1": {
+            "t4": "stopped",
+            "t5": "stopped",
+            "t1": "stopped",
+            "t2": "stopped",
+            "t3": "stopped"
+        }
+    }
+}
