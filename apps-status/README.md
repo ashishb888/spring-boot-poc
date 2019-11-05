@@ -9,10 +9,10 @@
 ###### Technologies stack
 
 <pre>
-	Language: Java 8
-	Framework: Spring boot 2.1.6.RELEASE
-	Build system: Maven 3.2+
-	Bash scripts
+Language: Java 8
+Framework: Spring boot 2.1.6.RELEASE
+Build system: Maven 3.2+
+Bash scripts
 </pre>
 
 ###### Package
