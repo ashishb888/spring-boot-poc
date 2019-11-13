@@ -1,17 +1,17 @@
 #!/bin/bash
 
-#title           :start.sh
-#description     :This script will monitor the locks dir.
+#title           :
+#description     :
 #author          :Ashish Bhosle
 
-yamlFile=/opt/ngs/ashishb/bash/apps-status/apps-status.yml
+baseDir=/opt/ngs/ashishb/bash/apps-status
+yamlFile=$baseDir/apps-status.yml
 
 # include parseYaml function
-. /opt/ngs/ashishb/bash/apps-status/parse-yaml.sh
+. $baseDir/parse-yaml.sh
 
 # read yaml file
 eval $(parseYaml $yamlFile "config_")
-
 
 lockFilesDir=$config_lockFilesDir
 hosts=$config_hosts
@@ -22,24 +22,12 @@ then
         exit 1
 fi
 
+finalResult=""
 
-cd $lockFilesDir
-
-result=""
-
-for dir in $(ls -d */); do
-	dirName=${dir%/}
-	#echo "Checking $dirName application"
-	cd $dirName
-	cat $dirName.lck | xargs kill -0 > /dev/null 2>&1
-	if [ $? -ne 0 ];
-	then
-		result+="$dirName,stopped\n"
-	else
-		result+="$dirName,running\n"
-	fi
-	cd ..
+for host in $hosts
+do
+	result=$(ssh $host 'bash -s' < $baseDir/task.sh $lockFilesDir)
+	finalResult+=$result"\n"
 done
 
-echo -e $result | sed '$d'
-
+echo -e $finalResult | sed '$d'

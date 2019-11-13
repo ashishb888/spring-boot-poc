@@ -13,7 +13,7 @@ logging:
   
 app:
   commands:
-    - /opt/ngs/ashishb/bash/apps-status/apps-status-r.sh
+    - /opt/ngs/ashishb/bash/apps-status/apps-status.sh
     #- cd
     #- /opt/ngs/ashishb/bash/apps-status
     #- bash
