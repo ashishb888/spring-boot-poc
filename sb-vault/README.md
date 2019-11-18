@@ -21,4 +21,4 @@ Build system: Maven 3.2+
 ` nohup $JAVA_HOME/bin/java -jar sb-vault-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 & `
 
 ###### Links
-[Vault project](https://www.vaultproject.io/ "Vault project")
+- [vault project](https://www.vaultproject.io/ "vault project")
