@@ -14,3 +14,39 @@ export VAULT_ADDR="http://127.0.0.1:8200"
 2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : start service
 2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : k1: v1
 2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : k2: v2
+
+
+ ----------==----------
+ RUN 2
+
+[user@host packages]$ echo -n '{"app.props.k3": "v3", "app.props.k2": "v2", "app.props.k1": "v2"}' |  ./vault kv put secret/sb-vault -
+Key              Value
+---              -----
+created_time     2019-11-18T08:58:55.86378338Z
+deletion_time    n/a
+destroyed        false
+version          6
+[user@host packages]$ ./vault kv get secret/sb-vault
+====== Metadata ======
+Key              Value
+---              -----
+created_time     2019-11-18T08:58:55.86378338Z
+deletion_time    n/a
+destroyed        false
+version          6
+
+======== Data ========
+Key             Value
+---             -----
+app.props.k1    v2
+app.props.k2    v2
+app.props.k3    v3
+[user@host packages]$
+
+
+2019-11-18 14:29:19.176  INFO 168232 --- [           main] poc.springboot.SBVaultApp                : Started SBVaultApp in 2.457 seconds (JVM running for 2.893)
+2019-11-18 14:29:19.177 DEBUG 168232 --- [           main] poc.springboot.SBVaultApp                : run service
+2019-11-18 14:29:19.177 DEBUG 168232 --- [           main] poc.springboot.service.SBVaultService    : main service
+2019-11-18 14:29:19.177 DEBUG 168232 --- [           main] poc.springboot.service.ConfigService     : main service
+2019-11-18 14:29:19.178 DEBUG 168232 --- [           main] poc.springboot.service.ConfigService     : start service
+2019-11-18 14:29:19.178 DEBUG 168232 --- [           main] poc.springboot.service.ConfigService     : props: {k2=v2, k3=v3, k1=v2}
