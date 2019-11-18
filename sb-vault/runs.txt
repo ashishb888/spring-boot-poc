@@ -56,7 +56,7 @@ app.props.k3    v3
 
 
 ----------==----------
-RUN 3
+RUN 3: Reading from JSON file
 
 [user@host sb-vault]$ cat data.json
 {"app.props.k1": "v1", "app.props.k2": "v2"}
@@ -93,3 +93,48 @@ app.props.k2    v2
 2019-11-18 14:40:52.968 DEBUG 171533 --- [           main] poc.springboot.service.ConfigService     : main service
 2019-11-18 14:40:52.968 DEBUG 171533 --- [           main] poc.springboot.service.ConfigService     : start service
 2019-11-18 14:40:52.968 DEBUG 171533 --- [           main] poc.springboot.service.ConfigService     : props: {k2=v2, k1=v1}
+
+----------==----------
+RUN 4: Reading from complex JSON file
+
+[user@host sb-vault]$ cat sample.json
+{
+    "app": {
+        "props":{
+            "k1": "v1",
+            "k2": "v2"
+        }
+    }
+}
+[user@host sb-vault]$
+
+
+[user@host packages]$ ./vault kv put secret/sb-vault @/opt/ngs/ashishb/apps/sb/sb-vault/sample.json
+Key              Value
+---              -----
+created_time     2019-11-18T09:25:34.163267811Z
+deletion_time    n/a
+destroyed        false
+version          9
+[user@host packages]$ ./vault kv get secret/sb-vault
+====== Metadata ======
+Key              Value
+---              -----
+created_time     2019-11-18T09:25:34.163267811Z
+deletion_time    n/a
+destroyed        false
+version          9
+
+=== Data ===
+Key    Value
+---    -----
+app    map[props:map[k1:v1 k2:v2]]
+
+2019-11-18 14:56:02.057  INFO 175686 --- [           main] poc.springboot.SBVaultApp                : Started SBVaultApp in 2.471 seconds (JVM running for 2.93)
+2019-11-18 14:56:02.057 DEBUG 175686 --- [           main] poc.springboot.SBVaultApp                : run service
+2019-11-18 14:56:02.058 DEBUG 175686 --- [           main] poc.springboot.service.SBVaultService    : main service
+2019-11-18 14:56:02.058 DEBUG 175686 --- [           main] poc.springboot.service.ConfigService     : main service
+2019-11-18 14:56:02.058 DEBUG 175686 --- [           main] poc.springboot.service.ConfigService     : start service
+2019-11-18 14:56:02.058 DEBUG 175686 --- [           main] poc.springboot.service.ConfigService     : props: {k2=v2, k1=v1}
+
+----------==----------
