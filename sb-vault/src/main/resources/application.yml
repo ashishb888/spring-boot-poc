@@ -1,0 +1,15 @@
+spring:
+ application:
+  name: sb-vault
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/sb-vault/sb-vault
+  
+#app:
+#  props:
+#    k1: v1
+#    k2: v2
+    

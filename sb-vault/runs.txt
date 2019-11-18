@@ -1,0 +1,16 @@
+RUN 1
+
+./vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000"
+
+export export VAULT_TOKEN="00000000-0000-0000-0000-000000000000"
+export VAULT_ADDR="http://127.0.0.1:8200"
+ 
+./vault kv put secret/sb-vault app.props.k1=v1 app.props.k2=v2
+
+2019-11-18 13:00:34.506  INFO 145300 --- [           main] poc.springboot.SBVaultApp                : Started SBVaultApp in 2.423 seconds (JVM running for 2.882)
+2019-11-18 13:00:34.507 DEBUG 145300 --- [           main] poc.springboot.SBVaultApp                : run service
+2019-11-18 13:00:34.507 DEBUG 145300 --- [           main] poc.springboot.service.SBVaultService    : main service
+2019-11-18 13:00:34.507 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : main service
+2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : start service
+2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : k1: v1
+2019-11-18 13:00:34.508 DEBUG 145300 --- [           main] poc.springboot.service.ConfigService     : k2: v2
