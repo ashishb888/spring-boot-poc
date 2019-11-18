@@ -16,8 +16,7 @@ public class ConfigService {
 	private void start() {
 		log.debug("start service");
 
-		log.debug("k1: " + ap.getProps().get("k1"));
-		log.debug("k2: " + ap.getProps().get("k2"));
+		log.debug("props: " + ap.getProps());
 	}
 
 	public void main() {
