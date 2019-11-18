@@ -130,6 +130,8 @@ Key    Value
 ---    -----
 app    map[props:map[k1:v1 k2:v2]]
 
+[user@host sb-vault]$ $JAVA_HOME/bin/java -jar sb-vault-0.0.1-SNAPSHOT.jar
+
 2019-11-18 14:56:02.057  INFO 175686 --- [           main] poc.springboot.SBVaultApp                : Started SBVaultApp in 2.471 seconds (JVM running for 2.93)
 2019-11-18 14:56:02.057 DEBUG 175686 --- [           main] poc.springboot.SBVaultApp                : run service
 2019-11-18 14:56:02.058 DEBUG 175686 --- [           main] poc.springboot.service.SBVaultService    : main service
