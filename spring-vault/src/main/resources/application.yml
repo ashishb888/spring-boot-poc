@@ -1,0 +1,9 @@
+spring:
+ application:
+  name: spring-vault
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/spring-vault/spring-vault
