@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: springboot-adhoc
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/springboot-adhoc/springboot-adhoc
+  

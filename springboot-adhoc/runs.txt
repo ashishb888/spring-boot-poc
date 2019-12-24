@@ -1,0 +1,22 @@
+RUN 1
+
+2019-12-24 12:53:53.956  INFO 12404 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.723 seconds (JVM running for 1.451)
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.SBApp                     : run service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.SBService         : main service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceA          : main service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceA          : start service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceA          : ServiceA: ServiceA
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceB          : main service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceB          : start service
+2019-12-24 12:53:53.956 DEBUG 12404 --- [           main] poc.springboot.service.ServiceB          : ServiceB: ServiceB
+2019-12-24 12:54:03.988 DEBUG 12404 --- [pool-2-thread-1] poc.springboot.service.ServiceB          : ServiceB: ServiceB
+2019-12-24 12:54:03.988 DEBUG 12404 --- [pool-1-thread-1] poc.springboot.service.ServiceA          : ServiceA: ServiceA
+2019-12-24 12:54:13.975 DEBUG 12404 --- [pool-1-thread-1] poc.springboot.service.ServiceA          : ServiceA: ServiceA
+2019-12-24 12:54:13.975 DEBUG 12404 --- [pool-2-thread-1] poc.springboot.service.ServiceB          : ServiceB: ServiceB
+2019-12-24 12:54:22.264  INFO 12404 --- [on(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-12-24 12:54:23.965 DEBUG 12404 --- [pool-2-thread-1] poc.springboot.service.ServiceB          : ServiceB: ServiceB
+2019-12-24 12:54:23.965 DEBUG 12404 --- [pool-1-thread-1] poc.springboot.service.ServiceA          : ServiceA: ServiceA
+2019-12-24 12:54:33.970 DEBUG 12404 --- [pool-2-thread-1] poc.springboot.service.ServiceB          : ServiceB: ServiceB
+2019-12-24 12:54:33.970 DEBUG 12404 --- [pool-1-thread-1] poc.springboot.service.ServiceA          : ServiceA: ServiceA
+
+----------==----------
