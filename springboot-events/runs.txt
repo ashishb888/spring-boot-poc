@@ -10,3 +10,32 @@ RUN 1:
 2020-01-01 17:08:31.209 DEBUG 15996 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
 
 ----------=----------
+RUN 2
+
+Description: After adding 
+	new SpringApplicationBuilder(SBApp.class)
+				.listeners(new ApplicationStartingEventListener(), new ApplicationEnvironmentPreparedEventListener(),
+						new ApplicationContextInitializedEventListener(), new ApplicationPreparedEventListener())
+				.run(args);
+
+2020-01-01 17:16:30.477 DEBUG 15168 --- [           main] licationEnvironmentPreparedEventListener : ApplicationEnvironmentPreparedEvent: org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2020-01-01 17:16:30.513 DEBUG 15168 --- [           main] plicationContextInitializedEventListener : ApplicationContextInitializedEvent: org.springframework.boot.context.event.ApplicationContextInitializedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
+2020-01-01 17:16:30.513  INFO 15168 --- [           main] poc.springboot.SBApp                     : Starting SBApp on WSWRVUA05124A with PID 15168 (E:\ashishb\git\spring-boot-poc\springboot-events\target\classes started by tcs_abhosle in E:\ashishb\git\spring-boot-poc\springboot-events)
+2020-01-01 17:16:30.513 DEBUG 15168 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-01 17:16:30.513  INFO 15168 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-01 17:16:30.545 DEBUG 15168 --- [           main] p.s.l.ApplicationPreparedEventListener   : ApplicationPreparedEvent: org.springframework.boot.context.event.ApplicationPreparedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
+2020-01-01 17:16:30.861 DEBUG 15168 --- [           main] poc.springboot.service.SBService         : pc service
+2020-01-01 17:16:30.914  INFO 15168 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.733 seconds (JVM running for 1.151)
+2020-01-01 17:16:30.914 DEBUG 15168 --- [           main] p.s.l.ApplicationStartedEventListener    : ApplicationStartedEvent: org.springframework.boot.context.event.ApplicationStartedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
+2020-01-01 17:16:30.914 DEBUG 15168 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-01 17:16:30.914 DEBUG 15168 --- [           main] p.s.l.ApplicationReadyEventListener      : ApplicationReadyEvent: org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@6093dd95]
+2020-01-01 17:16:30.914 DEBUG 15168 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
