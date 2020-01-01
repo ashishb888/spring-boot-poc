@@ -29,7 +29,6 @@ Description: After adding
  :: Spring Boot ::        (v2.2.1.RELEASE)
 
 2020-01-01 17:16:30.513 DEBUG 15168 --- [           main] plicationContextInitializedEventListener : ApplicationContextInitializedEvent: org.springframework.boot.context.event.ApplicationContextInitializedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
-2020-01-01 17:16:30.513  INFO 15168 --- [           main] poc.springboot.SBApp                     : Starting SBApp on WSWRVUA05124A with PID 15168 (E:\ashishb\git\spring-boot-poc\springboot-events\target\classes started by tcs_abhosle in E:\ashishb\git\spring-boot-poc\springboot-events)
 2020-01-01 17:16:30.513 DEBUG 15168 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
 2020-01-01 17:16:30.513  INFO 15168 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
 2020-01-01 17:16:30.545 DEBUG 15168 --- [           main] p.s.l.ApplicationPreparedEventListener   : ApplicationPreparedEvent: org.springframework.boot.context.event.ApplicationPreparedEvent[source=org.springframework.boot.SpringApplication@6093dd95]
