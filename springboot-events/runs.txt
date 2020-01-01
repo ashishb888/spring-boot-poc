@@ -1,0 +1,12 @@
+RUN 1:
+
+2020-01-01 17:08:30.875 DEBUG 15996 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-01 17:08:30.875  INFO 15996 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-01 17:08:31.160 DEBUG 15996 --- [           main] poc.springboot.service.SBService         : pc service
+2020-01-01 17:08:31.209  INFO 15996 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.651 seconds (JVM running for 1.08)
+2020-01-01 17:08:31.209 DEBUG 15996 --- [           main] p.s.l.ApplicationStartedEventListener    : ApplicationStartedEvent: org.springframework.boot.context.event.ApplicationStartedEvent[source=org.springframework.boot.SpringApplication@61a88b8c]
+2020-01-01 17:08:31.209 DEBUG 15996 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-01 17:08:31.209 DEBUG 15996 --- [           main] p.s.l.ApplicationReadyEventListener      : ApplicationReadyEvent: org.springframework.boot.context.event.ApplicationReadyEvent[source=org.springframework.boot.SpringApplication@61a88b8c]
+2020-01-01 17:08:31.209 DEBUG 15996 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
+
+----------=----------
