@@ -1,0 +1,8 @@
+RUN 1: lazy-initialization: true
+
+2020-01-01 15:59:10.003 DEBUG 3128 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-01 15:59:10.003  INFO 3128 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-01 15:59:10.284  INFO 3128 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.591 seconds (JVM running for 1.003)
+2020-01-01 15:59:10.286 DEBUG 3128 --- [           main] poc.springboot.SBApp                     : run service
+
+----------=----------

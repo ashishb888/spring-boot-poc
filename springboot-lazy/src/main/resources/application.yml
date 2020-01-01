@@ -1,0 +1,13 @@
+spring:
+ application:
+  name: springboot-lazy
+ 
+ main:
+  lazy-initialization: true
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/springboot-lazy/springboot-lazy
+  
