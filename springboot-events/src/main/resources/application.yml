@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: springboot-events
+ 
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/springboot-events/springboot-events
+  
