@@ -3,7 +3,7 @@ spring:
   name: springboot-lazy
  
  main:
-  lazy-initialization: true
+  lazy-initialization: false
 
 logging:
   level:

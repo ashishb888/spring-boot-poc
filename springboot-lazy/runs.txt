@@ -6,3 +6,11 @@ RUN 1: lazy-initialization: true
 2020-01-01 15:59:10.286 DEBUG 3128 --- [           main] poc.springboot.SBApp                     : run service
 
 ----------=----------
+RUN 2: lazy-initialization: false
+
+2020-01-01 16:01:59.513 DEBUG 1008 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-01 16:01:59.513  INFO 1008 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-01 16:01:59.782 DEBUG 1008 --- [           main] poc.springboot.service.SBService         : pc service
+2020-01-01 16:01:59.833  INFO 1008 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.639 seconds (JVM running for 1.108)
+2020-01-01 16:01:59.833 DEBUG 1008 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-01 16:01:59.833 DEBUG 1008 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
