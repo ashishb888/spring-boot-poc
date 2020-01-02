@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: spring-webflux
+ 
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/spring-webflux/spring-webflux

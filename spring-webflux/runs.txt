@@ -1,0 +1,11 @@
+RUN 1
+
+2020-01-02 16:19:02.888 DEBUG 13168 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-02 16:19:02.888  INFO 13168 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-02 16:19:04.453  INFO 13168 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 8080
+2020-01-02 16:19:04.460  INFO 13168 --- [           main] poc.springboot.SBApp                     : Started SBApp in 2.007 seconds (JVM running for 2.525)
+2020-01-02 16:19:04.460 DEBUG 13168 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-02 16:19:04.738 DEBUG 13168 --- [           main] poc.springboot.SBApp                     : gwc: >> result = Hello, Spring!
+2020-01-02 16:19:17.281  INFO 13168 --- [on(8)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+
+----------=----------
