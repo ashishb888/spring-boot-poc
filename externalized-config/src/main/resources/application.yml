@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: externalized-config
+ 
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/externalized-config/externalized-config
+  
