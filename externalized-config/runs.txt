@@ -11,3 +11,14 @@ RUN 1
 2020-01-02 14:43:48.274 DEBUG 3244 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
 
 ----------=----------
+RUN 2
+
+2020-01-02 14:45:12.687 DEBUG 13712 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-02 14:45:12.687  INFO 13712 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-02 14:45:12.972 DEBUG 13712 --- [           main] poc.springboot.service.SBService         : pc service
+2020-01-02 14:45:13.009  INFO 13712 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.638 seconds (JVM running for 1.078)
+2020-01-02 14:45:13.009 DEBUG 13712 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-02 14:45:13.009 DEBUG 13712 --- [           main] poc.springboot.service.SBService         : main service
+2020-01-02 14:45:13.009 DEBUG 13712 --- [           main] poc.springboot.service.SBService         : start service
+2020-01-02 14:45:13.009 DEBUG 13712 --- [           main] poc.springboot.service.SBService         : random: {secret=a01bae464d72af8bd4787b76ede4cf59, number=-1810403886, uuid=ec8086d8-f19d-4dec-8d63-051a6635c4ae}
+2020-01-02 14:45:13.009 DEBUG 13712 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
