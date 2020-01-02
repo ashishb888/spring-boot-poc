@@ -1,10 +1,15 @@
 spring:
- application:
-  name: externalized-config
+  application:
+    name: externalized-config
  
 logging:
   level:
     root: info
     poc.springboot: debug
   file: /var/tmp/log/apps/externalized-config/externalized-config
-  
+
+app:
+  random:
+    secret: ${random.value}
+    number: ${random.int}
+    uuid: ${random.uuid}

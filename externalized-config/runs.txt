@@ -1,0 +1,13 @@
+RUN 1
+
+2020-01-02 14:43:47.943 DEBUG 3244 --- [           main] poc.springboot.SBApp                     : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-02 14:43:47.943  INFO 3244 --- [           main] poc.springboot.SBApp                     : No active profile set, falling back to default profiles: default
+2020-01-02 14:43:48.206 DEBUG 3244 --- [           main] poc.springboot.service.SBService         : pc service
+2020-01-02 14:43:48.259  INFO 3244 --- [           main] poc.springboot.SBApp                     : Started SBApp in 0.611 seconds (JVM running for 1.014)
+2020-01-02 14:43:48.259 DEBUG 3244 --- [           main] poc.springboot.SBApp                     : run service
+2020-01-02 14:43:48.259 DEBUG 3244 --- [           main] poc.springboot.service.SBService         : main service
+2020-01-02 14:43:48.259 DEBUG 3244 --- [           main] poc.springboot.service.SBService         : start service
+2020-01-02 14:43:48.259 DEBUG 3244 --- [           main] poc.springboot.service.SBService         : random: {secret=1f268c24db7c51608f99bb77f653ab33, number=-622823909, uuid=51681ef0-0125-4262-8514-4fab21aecd44}
+2020-01-02 14:43:48.274 DEBUG 3244 --- [extShutdownHook] poc.springboot.service.SBService         : pd service
+
+----------=----------
