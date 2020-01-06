@@ -1,2 +1,2 @@
-directory: /var/tmp
-hosts: host1 host2
+directory: /var/tmp/t1
+hosts: host1 host6

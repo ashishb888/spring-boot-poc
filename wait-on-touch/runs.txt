@@ -1,0 +1,29 @@
+RUN 1
+
+[user@host1 ~]$ ls -lrth /var/tmp/t1/
+total 0
+-rw-r----- 1 user group 0 Jan  6 18:58 test1.txt
+-rw-r----- 1 user group 0 Jan  6 18:58 test2.txt
+[user@host1 ~]$ logout
+
+[user@host6 ~]$ ls -lrth /var/tmp/t1/
+total 0
+-rw-r----- 1 user group 0 Jan  6 18:58 test1.txt
+-rw-r----- 1 user group 0 Jan  6 18:58 test2.txt
+-rw-r----- 1 user group 0 Jan  6 18:58 test3.txt
+[user@host6 ~]$
+
+[user@host6 ~]$ $JAVA_HOME/bin/java -Xms1G -Xmx1G  -jar wait-on-touch-0.0.1-SNAPSHOT.jar
+
+
+2020-01-06 18:59:23.273 DEBUG 131655 --- [           main] poc.springboot.WaitOnTouchApp            : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-01-06 18:59:23.273  INFO 131655 --- [           main] poc.springboot.WaitOnTouchApp            : No active profile set, falling back to default profiles: default
+2020-01-06 18:59:23.771  INFO 131655 --- [           main] poc.springboot.WaitOnTouchApp            : Started WaitOnTouchApp in 1.041 seconds (JVM running for 1.49)
+2020-01-06 18:59:23.772 DEBUG 131655 --- [           main] poc.springboot.WaitOnTouchApp            : run service
+2020-01-06 18:59:23.773 DEBUG 131655 --- [           main] p.springboot.service.WaitOnTouchService  : main service
+2020-01-06 18:59:23.773 DEBUG 131655 --- [           main] p.springboot.service.WaitOnTouchService  : touchFilesCount service
+2020-01-06 18:59:23.773 DEBUG 131655 --- [           main] p.springboot.service.WaitOnTouchService  : commands: [/opt/ngs/ashishb/bash/wait-on-touch/wait-on-touch.sh]
+2020-01-06 18:59:24.133 DEBUG 131655 --- [           main] p.springboot.service.WaitOnTouchService  : status: 0
+2020-01-06 18:59:24.134 DEBUG 131655 --- [           main] p.springboot.service.WaitOnTouchService  : count: 5
+
+----------=----------
