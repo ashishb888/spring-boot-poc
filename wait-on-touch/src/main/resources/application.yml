@@ -1,0 +1,13 @@
+spring:
+ application:
+  name: wait-on-touch
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/wait-on-touch/wait-on-touch
+  
+app:
+  commands:
+    - /opt/ngs/ashishb/bash/wait-on-touch/wait-on-touch.sh
