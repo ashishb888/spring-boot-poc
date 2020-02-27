@@ -1,0 +1,10 @@
+spring:
+ application:
+  name: sb-standalone
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/sb-standalone/sb-standalone
+  
