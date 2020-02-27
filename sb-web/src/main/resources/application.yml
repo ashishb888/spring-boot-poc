@@ -1,0 +1,13 @@
+spring:
+ application:
+  name: sb-web
+
+server:  port: 7272
+  servlet:    context-path: /sb-web
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/sb-web/sb-web
+  
