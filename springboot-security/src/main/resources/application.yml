@@ -1,6 +1,10 @@
 spring:
- application:
-  name: springboot-security
+  application:
+    name: springboot-security
+  security:
+    user:
+      name: ashish
+      password: nopass
 
 server:  port: 8080
 #  servlet:#    context-path: /springboot-security
