@@ -1,0 +1,13 @@
+spring:
+ application:
+  name: springboot-security
+
+server:  port: 8080
+#  servlet:#    context-path: /springboot-security
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/springboot-security/springboot-security
+  
