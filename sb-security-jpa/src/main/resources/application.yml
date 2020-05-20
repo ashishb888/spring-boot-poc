@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: sb-security-jpa
+#  security:
+#    user:
+#      name: ashish
+#      password: nopass
+
+server:  port: 8080
+#  servlet:#    context-path: /sb-security-jpa
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/sb-security-jpa/sb-security-jpa
+  
