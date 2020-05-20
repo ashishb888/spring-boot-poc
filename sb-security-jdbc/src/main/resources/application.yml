@@ -6,6 +6,10 @@ spring:
 #      name: ashish
 #      password: nopass
 
+  h2:
+    console:
+      enabled: true
+
 server:  port: 8080
 #  servlet:#    context-path: /sb-security-jdbc
 
