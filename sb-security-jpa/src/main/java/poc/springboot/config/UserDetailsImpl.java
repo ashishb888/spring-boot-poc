@@ -2,30 +2,41 @@ package poc.springboot.config;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import poc.springboot.models.User;
+
 public class UserDetailsImpl implements UserDetails {
 
 	private String username;
+	private String password;
+	private boolean active;
+	private List<GrantedAuthority> authorities;
 
 	public UserDetailsImpl() {
 	}
 
-	public UserDetailsImpl(String username) {
-		this.username = username;
+	public UserDetailsImpl(User user) {
+		this.username = user.getUsername();
+		this.password = user.getPassword();
+		this.active = user.isActive();
+		this.authorities = Arrays.stream(user.getRoles().split(",")).map(SimpleGrantedAuthority::new)
+				.collect(Collectors.toList());
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+		return authorities;
 	}
 
 	@Override
 	public String getPassword() {
-		return "nopass";
+		return password;
 	}
 
 	@Override
@@ -50,7 +61,7 @@ public class UserDetailsImpl implements UserDetails {
 
 	@Override
 	public boolean isEnabled() {
-		return true;
+		return active;
 	}
 
 }

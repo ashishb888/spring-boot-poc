@@ -6,6 +6,15 @@ spring:
 #      name: ashish
 #      password: nopass
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sb-security-jpa
+    username: ashish
+    password: nopass
+  
+  jpa:    hibernate:      ddl-auto: update    
+    properties:      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      
 server:  port: 8080
 #  servlet:#    context-path: /sb-security-jpa
 
