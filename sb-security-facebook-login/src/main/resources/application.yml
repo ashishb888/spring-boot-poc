@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: sb-security-facebook-login
+
+server:  port: 8080
+#  servlet:#    context-path: /sb-security-facebook-login
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/sb-security-facebook-login/sb-security-facebook-login
+  
