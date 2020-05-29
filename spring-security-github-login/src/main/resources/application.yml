@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: spring-security-github-login
+
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: app_id
+            client-secret: app_secret
+
+server:  port: 8080
+#  servlet:#    context-path: /spring-security-github-login
+
+logging:
+  level:
+    root: info
+    poc.springboot: debug
+  file: /var/tmp/log/apps/spring-security-github-login/spring-security-github-login
+  
